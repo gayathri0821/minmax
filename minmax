@@ -1,0 +1,74 @@
+package bootcamp2;
+
+import java.util.Scanner;
+
+public class Minandmax {
+
+	public static void main(String[] args)
+	{
+		//read the input values through Scanner class
+	Scanner sc=new Scanner(System.in);
+	//prompt the user for taking length of an array
+	System.out.println("enter length of array:");
+	//takes size of array 
+	int length=sc.nextInt();
+	//creating array to store length of array
+	int[] arr=new int[length];
+	//prompt the user for  taking elements of array
+	System.out.println("enter elements of array:");
+	//reading array elements
+	for(int i=0;i<length;i++)
+	{
+		arr[i]=sc.nextInt();
+		
+	}
+	//calling max method
+	int max=getMax(arr);
+	//calling min method
+	int min=getMin(arr);
+	//prompt the user for taking min and max value
+	System.out.println("Max= " + max + " & "+" Min= " +min);
+	}
+	//calculate max value 
+	public static int getMax(int[] inputArray)
+	{
+		
+		int maxValue=inputArray[0];
+		for(int i=0;i<inputArray.length;i++)
+		{
+			//checking input array is greater than max value
+			if(inputArray[i]>maxValue)
+			{
+				//storing max value
+				maxValue=inputArray[i];
+			}//end of if block
+		}
+		//returns max value
+		return maxValue;
+			}
+	//calculate min value
+	public static int getMin(int[] inputArray)
+	{
+		int minValue=inputArray[0];
+		for(int i=0;i<inputArray.length;i++)
+		{
+			//checking input array is less than min value
+			if(inputArray[i]<minValue)
+			{
+				//storing min value
+				minValue=inputArray[i];
+			}//end of if block
+		}
+		//returns min value
+		return minValue;
+			}//end of main method
+		
+	
+	
+	
+
+	}//end of class block
+
+
+
+
